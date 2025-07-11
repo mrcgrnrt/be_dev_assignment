@@ -3,7 +3,7 @@ import settings
 from flask import json, request
 
 
-@app.route('/api/sensors/readings/<device_id>', methods=['POST'])
+@app.route('/api/sensors/<device_id>/readings', methods=['POST'])
 def get_configuration(device_id):
     response = app.response_class(mimetype='application/json')
     response.headers['Access-Control-Allow-Origin'] = '*'
